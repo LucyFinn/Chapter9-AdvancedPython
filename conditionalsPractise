@@ -1,0 +1,36 @@
+#CHAPTER 9 - ADVANCED PYTHON - CONDITIONALS
+age = int(input("Please enter your age: "))
+theory = input("Have you passed your theory test? y/n: ")
+#METHOD 1
+if age >= 17:
+    if theory == "yes":
+        print("You can apply for the test!")
+    else:
+        print("Sorry!")
+else:
+    print("Sorry you're too young!")
+    
+#METHOD 2
+if age >= 17 and theory == "y":
+    print("You can apply for the test!")
+elif age < 17:
+    print("Too young!")
+else:
+    print("Sorry!")
+
+#EXAMPLE WITH AN OR STATEMENT
+carAge = int(input("Enter age of your car: "))
+carFuel = input("Enter car's fuel type (petrol/diesel): ")
+if carAge >= 10 or carFuel == "diesel":
+    print("Pollution level: high")
+else:
+    print("Pollution level: low")
+    
+#MY OWN EXAMPLE
+#if youn are over 70 or do not have a job you can get on the bus for free or else you must pay
+age = int(input("Please enter your age? "))
+job = input("Do you have a job? y/n: ")
+if age >= 70 or job == "n":
+    print("You ride the bus for free!")
+else:
+    print("You must pay for the bus!")
