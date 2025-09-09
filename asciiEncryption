@@ -1,0 +1,17 @@
+#ASCII code encryption
+text = "hello world"
+shift = 3
+encrypted = ""
+for i in text:
+    print(i)
+    encrypted += (chr(ord(i) + shift))
+
+print("Original:", text)
+print("Encrypted:", encrypted)
+
+#changing 1 letter
+character = input("Please enter a letter: ")
+key = 3
+ascii = ord(character)
+encryptedLetter = chr(ascii + key)
+print("Encrypted: ", encryptedLetter)
