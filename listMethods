@@ -1,0 +1,58 @@
+#Using list methods !!
+myList = ["Kia", "BMW", "Audi", "Ford", "Toyota"]
+print(myList)
+
+#adding to the end of a list using the user input to get a new car
+newCar = input("Enter a new car: ")
+myList.append(newCar)
+print(myList)
+
+#Working out the difference between list.append and list.extend
+car = input("Please enter a second car: ")
+myList.extend(car) #this breaks up the string and puts each letter as a seperate value 
+print(myList)
+
+#checking if we can append a list into another list!
+newList = ["Honda", "Corolla"]
+myList.append(newList) #this will add the newlist into the original one 
+print(myList)
+
+#when using extend it does not add them as a seperate list but as a seprate value which combines the 2 lists together
+myList.extend(newList)
+print(myList)
+
+#removing specific items from the list
+myList.remove("Toyota")
+print(myList)
+
+#Make a list of both positive and negative numbers, we dont want any negative numbers, create a loop that will go through the list and change any negative values to a 0
+numList = [16, 9, -5, -12, 80, 30, -56, 2]
+print(numList)
+for i in range(len(numList)):
+    if numList[i] <= 0:
+        numList[i] = 0
+print(numList)
+
+#if you find a negative value remove it
+numList = [16, 9, -5, -12, 80, 30, -56, 2]
+newList = [] #creating an empty list to be able to store the values that are being remove from the list
+print(numList)
+for i in range(len(numList)):
+    if numList[i] <= 0:
+        newList.append(numList[i])
+print(newList)
+
+#Inputing your own numbers to the list
+numList = [16, 9, -5, -12, 80, 30, -56, 2]
+newList = []
+
+for i in range(5):
+    newNumber = int(input("Enter a number: "))
+    numList.append(newNumber)
+    
+for i in range(len(numList)):
+    if numList[i] <= 0:
+        newList.append(numList[i])   
+print(numList)
+print(newList)
+
