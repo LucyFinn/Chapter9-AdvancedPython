@@ -1,0 +1,78 @@
+#All the green code from pg 193 - 198
+#This example repeats this certain bit of code
+print("\t********************")
+print("\t*      Menu        *")
+print("\t********************")
+menuOption = int(input("\tEnter menu option 1 or 2: "))
+if menuOption == 1:
+    print("\t********************")
+    print("\t*      Menu        *")
+    print("\t********************")
+else:
+    print("\t********************")
+    print("\t*      Menu        *")
+    print("\t********************")
+    
+#This defines and calls up the function
+#NOTE a function must be defined before it is called up 
+def displayMenu()
+menuOption = int(input("\tEnter menu option 1 or 2: "))
+if menuOption == 1:
+    displayMenu()
+else:
+    displayMenu()
+    
+#This example creates an individual function for each thing 
+def displayMenu():
+    print("\t********************")
+    print("\t*      Menu        *")
+    print("\t********************")
+def menuOpt1():
+    print("\t********************")
+    print("\t*      Menu        *")
+    print("\t********************")
+def menuOpt2():
+    print("\t********************")
+    print("\t*      Menu        *")
+    print("\t********************")
+    
+def menuOpt(optNumber):
+    print("********************")
+    print("Option ", optNumber)
+    print("********************")
+    
+displayMenu()
+userOpt = int(input("Enter your option: "))
+is userOpt == 1:
+    menuOpt(userOpt)
+else:
+    menuOpt(userOpt)
+    
+def displayVolumeOfSphere(radiusIn):
+    volume = (4/3)*3.14*radiusIn**3
+    print("The volume is: ", volume)
+    
+radius = float(input("Enter radius: "))
+displayVolumeOfSphere(radius)
+
+def volCylinder(radius, height):
+    volume = 3.14 * (radius**2) * height
+    print("The volume is: ", volume)
+    
+radius = float(input("Enter radius: "))
+height = float(input("Enter height: "))
+volCylinder(radius, height)
+
+r = float(input("Enter radius: "))
+h = float(input("Enter height: "))
+volCylinder(r, h)
+
+volCylinder(5,9)
+
+r = float(input("Enter radius: "))
+h = float(input("Enter height: "))
+volCylinder(h, r)
+
+r = float(input("Enter radius: "))
+h = float(input("Enter height: "))
+volCylinder(height = h, radius = r)
