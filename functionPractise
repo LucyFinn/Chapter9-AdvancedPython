@@ -1,0 +1,70 @@
+#Practising working with functions
+#You always have to start a function with def
+#always put the functions at the top of the page
+
+def happyBirthday():
+    print("Happy Birthday!")  #this does not print out the function, this just defines it
+    
+def piVal(a,b):
+    print(a/b)
+    
+def multi(a,b):
+    print(a*b)
+    
+def powerOf(bN,iN):
+    output = bN**iN
+    print(output)
+    
+for i in range (3):
+    happyBirthday() #this will print out the function
+
+#using piVal
+x = 8
+y = 4
+piVal(x,y)
+    
+#using multi
+num1 = int(input("Enter number: "))
+num2 = int(input("Enter number: "))
+multi(num1, num2)
+
+bN = int(input("Enter base number: "))
+iN = int(input("Enter index number: "))
+powerOf(bN, iN)
+
+#Leaving cert pastpaper question!!
+def is_leap_year(y):
+    if(y % 400 == 0) or ((y % 4 == 0) and (y % 100 != 0)):
+        print(True)
+        print(year, "is a leap year!!")
+    else:
+        print(False)
+        print(year, "is not a leap year!!")
+    
+year = int(input("Enter a year: "))
+is_leap_year(year)
+
+#Taks 6 on PG 199 - CHAPTER 9
+def poolSize(a, b, c):
+    print(a*b*c)
+
+#volume = length*width*depth
+length = int(input("Enter the length of the pool: "))
+width = int(input("Enter the width of the pool: "))
+depth = int(input("Enter the depth of the pool: "))
+
+poolSize(length, width, depth)
+
+#Task 8 - PG 199 - chapter 9
+def validEmail():
+    if (email.count("@")) == 1 and  (email.count(".")) >= 1 and (len(email) >= 8):
+        return True
+    else:
+        return False
+
+email = input("Enter an email address: ")
+
+if validEmail():
+    print("Hooray!! Valid Email!!")
+else:
+    print("Whoops!! Not Valid Email!!")
