@@ -68,3 +68,21 @@ if validEmail():
     print("Hooray!! Valid Email!!")
 else:
     print("Whoops!! Not Valid Email!!")
+
+#Validating an email
+#How do we keep asking for the email until they enter a correct email?
+#Hint use a while True and break!
+def validEmail(email):
+    if (email.count("@")) == 1 and  (email.count(".")) >= 1 and (len(email) >= 8):
+        return True
+    else:
+        return False
+
+
+while True:
+    email = input("Enter an email address: ")
+    if validEmail(email):
+        print("This is a valid email!!")
+        break
+    else:
+        print("Sorry unvalid email!! Please try again!!")
