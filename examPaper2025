@@ -8,6 +8,12 @@ def get_grade(result):
         grade = "Distinction"
     elif result >= 65:
         grade = "Upper Merit"
+    #(iii) start -
+    elif result >= 50:
+        grade = "Lower Merit"
+    elif result >= 40:
+        grade = "Pass"
+    #(iii) end -
 
     return grade
 
@@ -22,7 +28,53 @@ for i in range(N):
     total = total + results[i]  # Running total
 
 # Divide by the total number of results to give the mean
-arithmetic_mean = total / 9
+arithmetic_mean = round(total / len(results), 2) #(i)rounding to 2 decimal places  #(ii)multiplying by the length of the list
 
 # Display the answer
 print("The mean percentage mark is", arithmetic_mean)
+
+#(iv) - Calling up the function - start
+grade = get_grade(arithmetic_mean)
+print("The grade for the average result is", grade)
+#(iv) - end
+
+#(v) finding the min and max values -start
+#results.sort()
+#minValue = results[0]
+#maxValue = results[-1]
+highest = max(results)
+lowest = min(results)
+print("The lowest score is", lowest)
+print("The highest score is", highest)
+#(v) - end
+
+#(vi) - start
+a = 0  #count of results less than 40
+b = 0  #count of results between 50 and 79 
+for i in results:
+    if i < 40:
+        a += 1
+    elif i >= 50 and i <= 79:
+        b += 1
+print("The number of scores below 40 is", a)
+print("The number of scores between 50 and 79 inclusive is", b)
+#(vi) - end
+
+#(vii) - start
+#COULDNT DO THIS PART
+longest_run = []
+current_run = [results[0]]
+
+for i in range(1, N):
+    if results[i] > results[i - 1]:
+        current_run.append(results[i])
+    else:
+        if len(current_run) > len(longest_run):
+            longest_run = current_run
+        current_run = [results[i]]
+        
+if len(current_run) > len(longest_run):
+    longest_run = current_run
+    
+print("Longest run of result increases is", longest_run)
+#(vii) - end 
