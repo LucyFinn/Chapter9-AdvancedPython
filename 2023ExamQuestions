@@ -3,23 +3,37 @@
 from random import randint
 
 def guess_game(max_guesses_allowed):
+    #(v) - start - difficulty level
+    difficulty = input("Enter difficulty E(asy) or H(ard): ")
+    if difficulty == ("E"):
+        secret_number = randint(1, 5)
+    else:
+        secret_number = randint(1, 100)
+    #(v) - end 
 
-    secret_number = randint(1, 5)
     guess_count = 0
     user_guess = 0
+    number = []
+    max_guesses_allowed = int(input("Enter the maximum number of guesses allowed: ")) #(iv)- having a max guess count
 
-    while (user_guess != secret_number):
+    while (user_guess != secret_number) and (guess_count <= max_guesses_allowed-1): #(iii) - ending after a specific number of guesses
 
         user_guess = int(input("Enter your guess: "))
+        #(vi) - start - making sure the same number isnt guessed twice
+        if user_guess in number:
+            print("you already guessed this number.")
+        number.append(user_guess)
+        #(vi) - end
+        
         guess_count += 1   # Increase guess_count by 1
         if user_guess == secret_number:
-            print("Congratulations! You win!")
+            print("Congratulations! You win!", "\nYou took",guess_count, "guesses.") #(i) - how many guesses were taken
+        #(ii) - start - number too high or too low
         elif user_guess < secret_number:
-            print("Sorry! Your guess was too low")
+            print("Sorry! Your guess was too low.")
         else:
-            print("Sorry! Your guess was too high")
-            print("You took",user_guess, "guesses." ) #(i) - how many guesses were taken
-        
+            print("Sorry! Your guess was too high.")
+        #(ii) - end 
 
 print("Welcome to the guessing game!")
 guess_game(3)
