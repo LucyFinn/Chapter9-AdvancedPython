@@ -1,0 +1,32 @@
+#Recursion
+#Coding a factorial
+n = 5
+answer = 1
+for i in range(n, 1, -1):
+    answer = answer*i #this multiplies the numbers by each other in desceniding order
+print(answer)
+
+#Coding a factorial using a function
+#Example 1 
+def factorial(n):
+        answer = 1
+        for i in range(n, 1, -1):
+            answer = answer*i
+        return answer
+print(factorial(5))
+    
+#Example 2 
+def factorial(n):
+    if n == 0 :
+        return 1
+    
+    return n * factorial(n-1)
+print(factorial(5))
+
+#Example for adding up the numbers
+def factorial(n):
+    if n == 0 :
+        return 0
+    
+    return n + factorial(n-1)
+print(factorial(5))
