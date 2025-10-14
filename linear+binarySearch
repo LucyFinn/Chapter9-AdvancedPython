@@ -1,0 +1,53 @@
+Driver code ...
+import random
+
+def linearSearch(x, y):
+    i = 0
+    while i < len(y):
+        if y[i] == x:
+            return i
+        i = i+1
+    return i
+
+temperatures = []
+for i in range(1,12):
+    n = random.randint(1,30)
+    temperatures.append(n)
+print(temperatures)
+target = int(input("Enter a target value: "))
+result = linearSearch(target, temperatures)
+
+if result != len(temperatures):
+    print(f"{target} found at position {result}")
+else:
+    print(f"{target} not found. Return value is {result}")
+
+def binary_search(v, L):
+ 
+    low = 0
+    high = len(L)-1
+ 
+    while (low <= high):
+        mid = (low+high)//2
+        
+        if L[mid] == v:
+            return mid
+        elif L[mid] < v:
+            low = mid + 1
+        else:
+            high = mid - 1
+            
+    return len(L)
+
+numbs = []
+for i in range(100):
+    n = random.randint(1,100)
+    numbs.append(n)
+numbs.sort()
+print(numbs)
+temp = int(input("Put in your target temperature: "))
+
+if binary_search(temp, numbs) == len(numbs):
+    print("Target not found in list!")
+else:
+    print(f"Target found at {binary_search(temp, numbs)}")
