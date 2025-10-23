@@ -1,0 +1,25 @@
+# #Code without comments
+# myList = [85,24,63,45,17,31,96,50]
+# for index in range(len(myList)-1): #this -1 is to ensure that it does not go out of range 
+#   print (myList)
+#   nextMinValue = min(myList[index + 1:]) #look at the index to the end and find the minimum value of this list 
+#   if nextMinValue < myList[index]:
+#       nextMinIndex = myList.index(nextMinValue) #this swaps the numbers to put the lowest value first
+#       myList[nextMinIndex] = myList[index]
+#       myList[index]= nextMinValue
+# print(myList)
+
+# #can you swap 2 list items e.g 85 and 24 using a temporary variable.
+# #change X for the list index values
+# myList = [85,24,63,45,17,31,96,50]
+# print(myList)
+# temp = myList[0] #85
+# myList[0] = myList[1] #24
+# myList[1] = temp
+# print(myList)
+
+myList = [85, 24, 63, 45, 17, 31, 96, 50]
+print(myList)
+for i in range(len(myList) - 1):  # go from 0 to second-last index
+    print(myList)
+    temp = myList[0]
