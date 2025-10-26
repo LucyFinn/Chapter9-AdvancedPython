@@ -1,0 +1,30 @@
+#Bubble Sorting
+#a bubble sort iterates through a list examining pairs of items at a time
+myList = [85, 24, 63, 45, 17, 31, 96, 50]
+for outerIndex in range(len(myList) - 1):
+    print(myList)
+    for index in range(len(myList) -1):
+        if myList[index] > myList[index+1]:
+            tempValue = myList[index]
+            myList[index] = myList[index+1]
+            myList[index+1] = tempValue
+print(myList)
+
+# Bubble Sort v1
+ 
+# 1. Initialise an unsorted list
+aList = [5, 7, 3, 6, 2]
+ 
+print("INPUT (initial list): ", aList)
+ 
+# 2. Traverse across every element in the list
+for i in range(len(aList)):
+    # 3. Compare all adjacent elements starting from the beginning
+    for j in range(len(aList)-1):
+        # 4. if the elements are out of order, then swap them
+        if aList[j] > aList[j+1]:
+            temp = aList[j+1]
+            aList[j+1] = aList[j]
+            aList[j] = temp
+ 
+print("OUTPUT (sorted list): ", aList) 
